@@ -1,85 +1,85 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
-  font-size: 15px;
+    font-family: sans-serif;
+    font-size: 15px;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .stage {
-  width: 1020px;
-  height: 510px;
-  background-image: url('/img/tile.png');
-  position: relative;
+    width: 1020px;
+    height: 510px;
+    background-image: url('/img/tile.png');
+    position: relative;
 }
 
 .entity {
-  position: absolute;
-  width: 85px;
-  height: 85px;
-
-  &--pac {
     position: absolute;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 65px;
-    user-select: none;    
-  }
+    width: 85px;
+    height: 85px;
 
-  &--wall {
-    background-image: url('/img/wall.png');
-  }
+    &--pac {
+        position: absolute;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 65px;
+        user-select: none;
+    }
 
-  &--apple {
-    background-image: url('/img/apple.png');
-  }
+    &--wall {
+        background-image: url('/img/wall.png');
+    }
 
-  &--bomb {
-    background-image: url('/img/bomb.png');
-  }
+    &--apple {
+        background-image: url('/img/apple.png');
+    }
 
-  &--tomb {
-    background-image: url('/img/tomb.png');
-  }
+    &--bomb {
+        background-image: url('/img/bomb.png');
+    }
+
+    &--tomb {
+        background-image: url('/img/tomb.png');
+    }
 }
 
 .pacboy {
-  &-active-light {
-    background-image: url('/img/pacboy-active-light.png');
-  }
+    &-active-light {
+        background-image: url('/img/pacboy-active-light.png');
+    }
 
-  &-active-medium {
-    background-image: url('/img/pacboy-active-medium.png');
-  }
+    &-active-medium {
+        background-image: url('/img/pacboy-active-medium.png');
+    }
 
-  &-active-dark {
-    background-image: url('/img/pacboy-active-dark.png');
-  }
+    &-active-dark {
+        background-image: url('/img/pacboy-active-dark.png');
+    }
 }
 
 .pacgirl {
-  &-active-light {
-    background-image: url('/img/pacgirl-active-light.png');
-  }
+    &-active-light {
+        background-image: url('/img/pacgirl-active-light.png');
+    }
 
-  &-active-medium {
-    background-image: url('/img/pacgirl-active-medium.png');
-  }
+    &-active-medium {
+        background-image: url('/img/pacgirl-active-medium.png');
+    }
 
-  &-active-dark {
-    background-image: url('/img/pacgirl-active-dark.png');
-  }
+    &-active-dark {
+        background-image: url('/img/pacgirl-active-dark.png');
+    }
 }
