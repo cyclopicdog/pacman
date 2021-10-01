@@ -1,8 +1,8 @@
-const body = document.querySelector('.container');
+const stage = document.querySelector('.stage');
 
 const pac_one = new Pacman();
 
-body.appendChild(pac_one.mount());
+stage.appendChild(pac_one.mount());
 console.log(pac_one.xPos);
 
 // const pac = document.querySelector('.pacboy-active-light');
