@@ -12,7 +12,11 @@ class Entity {
     mount() {
         this.render();
         this.update();
-        this_stage.array.push(this.x, this.y, this.type);
+        this_stage.array.push({
+            x: this.x,
+            y: this.y,
+            type: this.type,
+        });
         console.log(this_stage.array);
         return this.entity;
     }
@@ -24,6 +28,14 @@ class Entity {
         this.entity.style.top = `${this.xPos}px`;
         this.entity.style.left = `${this.yPos}px`;
     }
+
+    // unmount(x, y) {
+    //     const isMatch = this.array.filter((element) => {
+    //         if (element.x === x && element.y === y) {
+    //             if (element.type === 'apple') {
+    //                 return
+    //             }
+    //         }
 
     elementFromHTML(html, parent = 'div') {
         const div = document.createElement(parent);

@@ -5,7 +5,6 @@ class Pacman {
             (this.mouth = mouth),
             (this.direction = direction);
     }
-
     render() {
         this.pacman = this.elementFromHTML(
             `<div class="entity entity--pac pacboy-active-light">`
@@ -41,18 +40,15 @@ class Pacman {
             }
         });
     }
-
     mount() {
         this.render();
         this.update();
         return this.pacman;
     }
-
     update() {
         this.pacman.style.left = `${this.xPos * TILE_SIZE}px`;
         this.pacman.style.top = `${this.yPos * TILE_SIZE}px`;
     }
-
     move(direction) {
         if (this.mouth === 'open') {
             this.pacman.style.backgroundPositionX = '100%';
@@ -64,28 +60,51 @@ class Pacman {
         if (direction === 'right') {
             this.pacman.style.backgroundPositionY = '0%';
             this.xPos++;
+            const move_right = this_stage.collisionDetection(
+                this.xPos,
+                this.yPos
+            );
+            console.log(move_right);
+            if (move_right === true) {
+                this.xPos--;
+            }
         }
-
         if (direction === 'left') {
             console.log('left');
             this.pacman.style.backgroundPositionY = '27%';
             this.xPos--;
+            const move_left = this_stage.collisionDetection(
+                this.xPos,
+                this.yPos
+            );
+            console.log(move_left);
+            if (move_left === true) {
+                this.xPos++;
+            }
         }
-
         if (direction === 'up') {
             this.pacman.style.backgroundPositionY = '100%';
-
             this.yPos--;
+            const move_up = this_stage.collisionDetection(this.xPos, this.yPos);
+            console.log(move_up);
+            if (move_up === true) {
+                this.yPos++;
+            }
         }
-
         if (direction === 'down') {
             this.pacman.style.backgroundPositionY = '58%';
-
             this.yPos++;
+            const move_down = this_stage.collisionDetection(
+                this.xPos,
+                this.yPos
+            );
+            console.log(move_down);
+            if (move_down === true) {
+                this.yPos--;
+            }
         }
         return this.update();
     }
-
     elementFromHTML(html, parent = 'div') {
         const div = document.createElement(parent);
         div.innerHTML = html;
